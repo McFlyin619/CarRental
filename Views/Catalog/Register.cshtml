@@ -1,0 +1,75 @@
+@{
+    ViewData["Title"] = "Register Car";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/css/catalog/register.css">
+}
+
+<form>
+  <div class="form-group">
+    <label for="carMake">Make</label> 
+    <input id="carMake" name="carMake" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="carModel">Model</label> 
+    <input id="carModel" name="carModel" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="carYear">Year</label> 
+    <input id="carYear" name="carYear" type="number" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="carMiles">Miles</label> 
+    <input id="carMiles" name="carMiles" type="number" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="carCategory">Category</label> 
+    <div>
+      <select id="carCategory" name="carCategory" class="custom-select">
+        <option value="sedan">Sedan</option>
+        <option value="suv">SUV</option>
+        <option value="truck">Truck</option>
+        <option value="crossover">Crossover</option>
+        <option value="hybrid">Hybrid</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="carColor">Color</label> 
+    <input id="carColor" name="carColor" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="carMPG">MPG</label> 
+    <input id="carMPG" name="carMPG" type="number" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="carPrice">Price</label> 
+    <input id="carPrice" name="carPrice" type="number" class="form-control">
+  </div>
+    <div class="form-group">
+    <label for="carImage">Image URL</label> 
+    <input id="carImage" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Transmission</label> 
+    <div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="manual"> 
+        <label for="radio_0" class="custom-control-label">Manual</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="auto"> 
+        <label for="radio_1" class="custom-control-label">Automatic</label>
+      </div>
+    </div>
+  </div> 
+  <div class="form-group">
+    <button id="registerCar" type="button" class="btn btn-outline-primary btn-block">Add Vehicle</button>
+  </div>
+</form>
+
+
+@section Scripts {
+    <script src="/js/catalog/register.js"></script>
+}
