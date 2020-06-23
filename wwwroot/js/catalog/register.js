@@ -10,6 +10,8 @@ function init() {
 window.onload = init;
 
 
+
+
 function Car(make,model,year,miles,category,color,mpg,price,image,isManual) {
     this.make = make;
     this.model = model;
@@ -39,5 +41,21 @@ function register() {
     var newCar = new Car(make, model, year, miles, category, color, mpg, price, image, isManual);
 
     console.log('Car info ', newCar);
+
+    $.ajax({
+        type: 'POST',
+        url: '/catalog/registerCar',
+        data: JSON.stringify(newCar),
+        contentType: 'application/json',
+        success: (res) => {
+            console.log('Server says: ', res);
+        },
+        error: (errorDetails) => {
+            console.log("there is an error: ", errorDetails);
+        }
+        
+    });
+
+    
 }
 

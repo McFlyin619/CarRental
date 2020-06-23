@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarRental
 {
@@ -24,6 +25,10 @@ namespace CarRental
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            // configure database services
+            var conString = "Data source=CarRental.db"; // info to connect to db
+            services.AddDbContext<DataContext>(options => options.UseSqlite(conString)); //what type of db are we connecting to
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
