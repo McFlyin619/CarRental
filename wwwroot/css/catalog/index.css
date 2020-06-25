@@ -1,0 +1,23 @@
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.car-img {
+    width: 100%;
+}
+.price {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: bold ;
+}
+
+#mdlPrice {
+    color: var(--danger);
+    font-size: 2rem;
+    font-weight: bold ;
+}
+
+.price-container {
+    margin-right: auto!important;
+}

@@ -24,7 +24,7 @@ namespace CarRental.Controllers
         public IActionResult GetCatalog()
         {
             
-            var list = DbContext.Cars.ToList(); // read  ALL in the table
+            var list = DbContext.Cars.ToList(); // read  ALL in the table (list of Car Objects)
             return Json(list); //send it back as a JSON list
         }
 
