@@ -1,7 +1,7 @@
 h1 {
     color: var(--primary);
     text-shadow: 2px 2px 3px #969696;
-    margin-top: 50px;
+    margin: 50px 0 0 2rem;
 }
 
 form {
@@ -13,9 +13,6 @@ form {
     text-shadow: 2px 2px 3px #969696;
     -webkit-box-shadow: 1px 11px 15px 15px #dddddd; 
     box-shadow: 1px 11px 15px 15px #dddddd;
-    margin: 100px 0;   
+    margin: 10rem 2rem;   
 }
 
-input {
-    border: 1px solid var(--primary);
-}

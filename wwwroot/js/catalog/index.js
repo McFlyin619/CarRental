@@ -21,21 +21,10 @@ function displayCars() {
         var car = catalog[i];
 
         var card = `
-        <div class="card border-primary mb-3" style="max-width: 18rem;">
-            <div class="card-header">
-            ${car.year} ${car.make} ${car.model}
-            </div>
-            <div class="card-body text-primary">
-                <img src="${car.image}" class="card-img" alt="Vehicle picture">
-                <div class="card-footer">
-                    <h5 class="card-title">
-                        Per Day: $${car.price.toFixed(2)}
-                    </h5>
-                    <button class="btn btn-outline-primary btn-block" onclick="displayModal(${i})">Rent Me</button>
-                </div>
-            </div>
-        </div>
-
+        <figure class="figure">
+            <img onclick="displayModal(${i})" src="${car.image}" class="figure-img img-fluid rounded" alt="vehicle picture">
+            <figcaption class="figure-caption">${car.year} ${car.make} ${car.model}<button class="btn btn-outline-primary btn-block" onclick="displayModal(${i})">Rent Me - $${car.price.toFixed(2)}</button></figcaption>
+        </figure>
         `;
         $('#catalog-container').append(card);
     }
@@ -46,7 +35,7 @@ function displayModal(index) {
 
     $('#mdlTitle').text(`${car.year} ${car.make} ${car.model}`);
     $('#mdlImg').html(`<img class="car-img" src="${car.image}">`);
-    $('#mdlPrice').text(`${car.price.toFixed(2)}`);
+    $('#mdlPrice').text(`$${car.price.toFixed(2)}`);
     $('#mdlCat').text(`${car.category}`);
     $('#mdlColor').text(`${car.color}`);
     $('#mdlMiles').text(`${car.miles}`);
